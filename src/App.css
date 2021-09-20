@@ -1,7 +1,9 @@
 body {
-  background: url(https://nicolebianchi.com/wp-content/uploads/2017/05/computer-2242274_1280.jpg) no-repeat center center fixed;
+  background: url(https://cdn.wallpapersafari.com/99/78/NfLFkt.jpg) no-repeat center center fixed;
+  opacity: 0.80;
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;
   background: cover;
+  width: 100%;
 }
