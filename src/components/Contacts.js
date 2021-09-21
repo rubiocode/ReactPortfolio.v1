@@ -1,14 +1,46 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
-import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-import { Snackbar, IconButton, TextField } from '@material-ui/core';
+import Typed from 'react-typed';
 import MuiAlert from '@material-ui/lab/Alert';
 import amber from '@material-ui/core/colors/amber';
+import avatar1 from "../img/avatar1.png";
 import EmailIcon from '@material-ui/icons/Email';
 import axios from 'axios';
+import {
+    ThemeProvider,
+    createTheme,
+    makeStyles
+} from '@material-ui/core/styles';
+
+import {
+    Snackbar,
+    IconButton,
+    TextField,
+    Typography,
+    Grid,
+    Avatar
+} from '@material-ui/core';
+
+
+
+const useStyles = makeStyles(theme=>({
+    heading: {
+        color: '#000',
+        padding: '3rem 0 0 1rem',
+        textTransform: 'uppercase',
+        textAlign: 'center'
+    },
+    avatar1: {
+        width: theme.spacing(15),
+        height: theme.spacing(15),
+        margin: theme.spacing(1),
+    },
+}));
+
 
 
 const Contacts = (props) => {
+    const classes = useStyles();
     const theme = createTheme({
         palette: {
             primary: amber,
@@ -51,81 +83,95 @@ const Contacts = (props) => {
         }
         setSnackbar(false);
     };
-
     return (
-        <ThemeProvider theme={theme}>
+        <>
             <Navbar />
-            <TextField
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                label="Name"
-                {...props}
-                fullWidth
-                margin="normal"
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                variant="outlined"
-            />
-            <TextField
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                label="Email"
-                {...props}
-                fullWidth
-                margin="normal"
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                variant="outlined"
-            />
-            <TextField
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                label="Subject"
-                {...props}
-                fullWidth
-                margin="normal"
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                variant="outlined"
-            />
-            <TextField
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                label="Message"
-                multiline
-                rows={5}
-                {...props}
-                fullWidth
-                margin="normal"
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                variant="outlined"
-            />
-            <IconButton
-                variant="contained"
-                color="primary"
-                onClick={handleSubmit}
-                disabled={name === "" || email === "" || subject === "" || text === "" ? true : false}
-            >
-                <EmailIcon />
-            </IconButton>
-            <Snackbar
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
-                open={snackbar}
-                autoHideDuration={2750}
-                onClose={handleClose}>
-                <MuiAlert onClose={handleClose} severity="success">
-                    Your message has been sent.
-                </MuiAlert>
-            </Snackbar>
-        </ThemeProvider>
+            <Grid container justify="center" alignItems="center" >
+
+                <Grid item xs={9}>
+                    <ThemeProvider theme={theme}>
+
+                        <Typography className={classes.heading} variant='h4'>
+                            <Typed strings={['Let\'s Connect!']} typeSpeed={40} />
+                        </Typography>
+                        <Grid container justifyContent='center'>
+                <Avatar className={classes.avatar1} src={avatar1} alt='Avatar' />
+            </Grid>
+                        <TextField
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            label="Name"
+                            {...props}
+                            fullWidth={true}
+                            margin="dense"
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            variant="outlined"
+                            size='medium'
+                        />
+                        <TextField
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            label="Email"
+                            {...props}
+                            fullWidth
+                            margin="normal"
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            variant="outlined"
+                        />
+                        <TextField
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
+                            label="Subject"
+                            {...props}
+                            fullWidth
+                            margin="normal"
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            variant="outlined"
+                        />
+                        <TextField
+                            value={text}
+                            onChange={(e) => setText(e.target.value)}
+                            label="Message"
+                            multiline
+                            rows={5}
+                            {...props}
+                            fullWidth
+                            margin="normal"
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            variant="outlined"
+                        />
+                        <IconButton
+                            variant="contained"
+                            color="primary"
+                            onClick={handleSubmit}
+                            disabled={name === "" || email === "" || subject === "" || text === "" ? true : false}
+                        >
+                            <EmailIcon />
+                        </IconButton>
+                        <Snackbar
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            open={snackbar}
+                            autoHideDuration={2750}
+                            onClose={handleClose}>
+                            <MuiAlert onClose={handleClose} severity="success">
+                                Your message has been sent.
+                            </MuiAlert>
+                        </Snackbar>
+                    </ThemeProvider>
+                </Grid>
+            </Grid>
+        </>
     );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { makeStyles } from '@material-ui/core/styles';
+import Typed from 'react-typed';
 import project1 from '../img/Project1.png';
 import project2 from '../img/ufo.png';
 import project3 from '../img/coming.jpeg';
@@ -17,25 +18,36 @@ import {
     Typography
 } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     mainContainer: {
-        background: '#233',
-        height: '100%'
+        background: '#f8f1cd',
+        height: '100%',
+        width: '100%',
+        margin: '0px'
     },
     cardContainer: {
         maxWidth: 345,
         margin: '3rem'
-    }
-}))
+    },
+    heading: {
+        color: '#000',
+        padding: '3rem 0 0 1rem',
+        textTransform: 'uppercase',
+        textAlign: 'center'
+    },
+})
 
 const Portfolio = () => {
     const classes = useStyles();
     return (
-        <Box component='div' className={classes.mainContainer}>
+        <Box component='div' spacing={2} className={classes.mainContainer}>
             <Navbar />
+            <Typography className={classes.heading} variant='h4'>
+                <Typed strings={['Check out these projects']} typeSpeed={40} />
+            </Typography>
             <Grid container justify='center' alignItems='center'>
                 {/* Project 1 */}
-                <Grid item xs={12} sm={8} md={6}>
+                <Grid item xs={12} sm={8} md={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia
@@ -74,7 +86,7 @@ const Portfolio = () => {
                     </Card>
                 </Grid>
                 {/* Project 2 */}
-                <Grid item xs={12} sm={8} md={6}>
+                <Grid item xs={12} sm={8} md={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia
@@ -112,7 +124,7 @@ const Portfolio = () => {
                     </Card>
                 </Grid>
                 {/* Project 3 */}
-                <Grid item xs={12} sm={8} md={6}>
+                <Grid item xs={12} sm={8} md={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia
@@ -130,15 +142,6 @@ const Portfolio = () => {
                                     variant='body2'
                                     color='textSecondary'
                                     component='p'>
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
                                     Coming Soon...
                                     Coming Soon...
                                     Coming Soon...

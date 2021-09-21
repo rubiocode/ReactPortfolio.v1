@@ -4,7 +4,8 @@ import RightMenuSlider from '@material-ui/core/Drawer';
 import avatar from "../img/avatar.png";
 import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import Footer from './Footer';
 import {
     AppBar,
     Toolbar,
@@ -119,6 +120,7 @@ export const Navbar = () => {
                         open={state.right}
                         onClose={toggleSlider('right', false)}>
                             {slideList('right')}
+                        <Footer />    
                         </RightMenuSlider>
                     </Toolbar>
                 </AppBar>
