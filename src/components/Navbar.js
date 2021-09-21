@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import RightMenuSlider from '@material-ui/core/Drawer';
 import avatar from "../img/avatar.png";
 import {Link} from 'react-router-dom';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import {
     AppBar,
     Toolbar,
@@ -18,7 +20,6 @@ import {
 } from '@material-ui/core';
 
 import {
-    ArrowBack,
     AssignmentInd,
     Home,
     Apps,
@@ -55,7 +56,7 @@ const menuItems = [
     },
     {
         listIcon: <AssignmentInd />,
-        listText: "Resume",
+        listText: "About Me",
         listPath: '/resume'
     },
     {
@@ -65,7 +66,7 @@ const menuItems = [
     },
     {
         listIcon: <ContactMail />,
-        listText: "Contacts",
+        listText: "Contact Me",
         listPath: '/contacts'
     }
 ]
@@ -108,13 +109,13 @@ export const Navbar = () => {
                 <AppBar position='static' style={{ background: '#222' }}>
                     <Toolbar>
                         <IconButton onClick={toggleSlider('right', true)}>
-                            <ArrowBack style={{ color: 'tomato' }} />
+                        <FontAwesomeIcon icon={faCoffee} color='white' />
                         </IconButton>
-                        <Typography variant='h5' style={{ color: 'tan' }}>
-                            Portfolio
+                        <Typography variant='h5' style={{ color: '#fff' }}>
+                            Menu
                         </Typography>
                         <RightMenuSlider 
-                        anchor="right" 
+                        anchor="left" 
                         open={state.right}
                         onClose={toggleSlider('right', false)}>
                             {slideList('right')}
