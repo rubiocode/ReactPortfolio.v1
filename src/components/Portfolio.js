@@ -5,6 +5,8 @@ import Typed from 'react-typed';
 import project1 from '../img/Project1.png';
 import project2 from '../img/ufo.png';
 import project3 from '../img/coming.jpeg';
+import LanguageIcon from '@material-ui/icons/Language';
+import GitHubIcon from '@material-ui/icons/GitHub';
 //import classes from '*.module.css';
 import {
     Box,
@@ -14,8 +16,8 @@ import {
     CardActions,
     CardContent,
     CardMedia,
-    Button,
-    Typography
+    Typography,
+    IconButton
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -74,13 +76,12 @@ const Portfolio = () => {
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
-
-                            <Button size='small' color='primary'>
-                                Repo
-                            </Button>
-                            <Button size='small' color='primary'>
-                                Live Demo
-                            </Button>
+                        <IconButton href="https://rubiocode.github.io/Make_My_Day/index.html" target="_blank">
+                                <LanguageIcon />
+                            </IconButton>
+                            <IconButton href="https://github.com/rubiocode/Make_My_Day" target="_blank">
+                                <GitHubIcon />
+                            </IconButton>
                         </CardActions>
 
                     </Card>
@@ -114,12 +115,12 @@ const Portfolio = () => {
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
-                            <Button size='small' color='primary'>
-                                Repo
-                            </Button>
-                            <Button size='small' color='primary'>
-                                Live Demo
-                            </Button>
+                            <IconButton href="https://the-4th-kind.herokuapp.com/" target="_blank">
+                                <LanguageIcon />
+                            </IconButton>
+                            <IconButton href="https://github.com/uglyb0nes/4thKind" target="_blank">
+                                <GitHubIcon />
+                            </IconButton>
                         </CardActions>
                     </Card>
                 </Grid>
@@ -167,12 +168,12 @@ const Portfolio = () => {
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
-                            <Button size='small' color='primary'>
-                                Repo
-                            </Button>
-                            <Button size='small' color='primary'>
-                                Live Demo
-                            </Button>
+                            <IconButton href="https://github.com/rubiocode" target="_blank">
+                                <LanguageIcon />
+                            </IconButton>
+                            <IconButton href="https://github.com/rubiocode" target="_blank">
+                                <GitHubIcon />
+                            </IconButton>
                         </CardActions>
                     </Card>
                 </Grid>
