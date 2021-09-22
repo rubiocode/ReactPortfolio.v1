@@ -1,6 +1,6 @@
 import React from 'react'
 import { BottomNavigation, IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'
+//import { makeStyles } from '@material-ui/core/styles'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
@@ -9,21 +9,20 @@ import Resume from '../img/Resume.pdf'
 
 
 //CSS styles
-const useStyles = makeStyles({
-    root: {
-        "& .MuiBottomNavigationAction": {
-            minWidth: 0,
-            maxWidth: 250,
-        },
-        button: {
-            color: '#000'
-        }
-    }
-})
+// const useStyles = makeStyles({
+//     root: {
+//         "& .MuiBottomNavigationAction": {
+//             minWidth: 0,
+//             maxWidth: 250,
+//         },
+//         button: {
+//             color: '#000'
+//         }
+//     }
+// })
 
 
 const Footer = () => {
-    const classes = useStyles();
 
     return (
 
