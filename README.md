@@ -1,6 +1,6 @@
 <div align="center">
 
-# Rubi's React Full-Stack Web Developer Portfolio.v01
+# Rubi's React Fullstack Software Developer Portfolio.v01
  
 Built with React, MaterialUI, JavaScript, and Fontawesome.
 
