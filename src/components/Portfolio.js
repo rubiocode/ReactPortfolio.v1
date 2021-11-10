@@ -2,9 +2,6 @@ import React from 'react';
 import Navbar from './Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typed from 'react-typed';
-import project1 from '../img/Project1.png';
-import project2 from '../img/ufo.png';
-import project3 from '../img/coming.jpeg';
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';
 //import classes from '*.module.css';
@@ -56,30 +53,29 @@ const Portfolio = () => {
                                 component='img'
                                 alt='Project 1'
                                 height='140'
-                                image={project1}>
+                    
+                                image='https://user-images.githubusercontent.com/78938193/141062541-482c063a-1e6d-440b-ac2e-68b0004c33c7.png'>
 
                             </CardMedia>
                             <CardContent>
                                 <Typography gutterBottom variant='h5'>
-                                    Make My Day
+                                    Make My Day.v2
                                 </Typography>
                                 <Typography
                                     variant='body2'
                                     color='textSecondary'
                                     component='p'>
-                                    This version of Make My Day App showcases my personal style and layout of the homepage. This
-                                    app presents the user with an uplifting gallery of foxy images, quotes, and gifs.
+                                    Revamped former group project to create a photo search app featuring search image function, infinite scrolling, and user photo information.
                                     <br></br>
-                                    Built with: HTML | CSS | JavaScript | JQuery | JSON | AJAX | MDBootstrap | CSS Gradient IO |
-                                    Third Party APIs
+                                    Built with: Material UI | Node | React | Styled-Components | Unsplash API
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
-                        <IconButton href="https://rubiocode.github.io/Make_My_Day/index.html" target="_blank">
+                        <IconButton href="https://rubiocode.github.io/MakeMyDay.v2/ " target="_blank">
                                 <LanguageIcon />
                             </IconButton>
-                            <IconButton href="https://github.com/rubiocode/Make_My_Day" target="_blank">
+                            <IconButton href="https://github.com/rubiocode/MakeMyDay.v2" target="_blank">
                                 <GitHubIcon />
                             </IconButton>
                         </CardActions>
@@ -94,7 +90,7 @@ const Portfolio = () => {
                                 component='img'
                                 alt='Project 2'
                                 height='140'
-                                image={project2}>
+                                image='https://user-images.githubusercontent.com/78938193/141203657-e7b263fa-3043-457c-8dd6-d4d13e9bb728.png'>
 
                             </CardMedia>
                             <CardContent>
@@ -132,46 +128,27 @@ const Portfolio = () => {
                                 component='img'
                                 alt='Project 3'
                                 height='140'
-                                image={project3}>
+                                image='https://user-images.githubusercontent.com/78938193/141203451-974f88f9-d9f9-4b78-b7d6-320c8a05b6d2.png'>
 
                             </CardMedia>
                             <CardContent>
                                 <Typography gutterBottom variant='h5'>
-                                    Project 3
+                                    Belle L'Jaru Skincare Store
                                 </Typography>
                                 <Typography
                                     variant='body2'
                                     color='textSecondary'
                                     component='p'>
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
-                                    Coming Soon...
+                                    Mock skincare store featuring user authentication, mock skincare products, product search, skincare quiz, skincare routine, and stripe payments.
+                                    Built with: Apollo Server | GraphQL | MaterialUI | MERN | Parallax | Stripe 
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
-                            <IconButton href="https://github.com/rubiocode" target="_blank">
+                            <IconButton href="https://desolate-hamlet-45640.herokuapp.com/" target="_blank">
                                 <LanguageIcon />
                             </IconButton>
-                            <IconButton href="https://github.com/rubiocode" target="_blank">
+                            <IconButton href="https://github.com/jazcr/belle-ljru" target="_blank">
                                 <GitHubIcon />
                             </IconButton>
                         </CardActions>

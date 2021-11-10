@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Typed from 'react-typed';
-import MuiAlert from '@material-ui/lab/Alert';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import Resume from '../img/Resume.pdf'
 import amber from '@material-ui/core/colors/amber';
 import avatar1 from "../img/avatar1.png";
 import EmailIcon from '@material-ui/icons/Email';
@@ -13,9 +16,7 @@ import {
 } from '@material-ui/core/styles';
 
 import {
-    Snackbar,
     IconButton,
-    TextField,
     Typography,
     Grid,
     Avatar
@@ -23,7 +24,7 @@ import {
 
 
 
-const useStyles = makeStyles(theme=>({
+const useStyles = makeStyles(theme => ({
     heading: {
         color: '#000',
         padding: '3rem 0 0 1rem',
@@ -36,8 +37,6 @@ const useStyles = makeStyles(theme=>({
         margin: theme.spacing(1),
     },
 }));
-
-
 
 const Contacts = (props) => {
     const classes = useStyles();
@@ -86,7 +85,7 @@ const Contacts = (props) => {
     return (
         <>
             <Navbar />
-            <Grid container justify="center" alignItems="center" >
+            <Grid container style={{justifyContent:"center", alignItems:"center"}} >
 
                 <Grid item xs={9}>
                     <ThemeProvider theme={theme}>
@@ -95,84 +94,41 @@ const Contacts = (props) => {
                             <Typed strings={['Let\'s Connect!']} typeSpeed={40} />
                         </Typography>
                         <Grid container justifyContent='center'>
-                <Avatar className={classes.avatar1} src={avatar1} alt='Avatar' />
-            </Grid>
-                        <TextField
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            label="Name"
-                            {...props}
-                            fullWidth={true}
-                            margin="dense"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            variant="outlined"
-                            size='medium'
-                        />
-                        <TextField
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            label="Email"
-                            {...props}
-                            fullWidth
-                            margin="normal"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            variant="outlined"
-                        />
-                        <TextField
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                            label="Subject"
-                            {...props}
-                            fullWidth
-                            margin="normal"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            variant="outlined"
-                        />
-                        <TextField
-                            value={text}
-                            onChange={(e) => setText(e.target.value)}
-                            label="Message"
-                            multiline
-                            rows={5}
-                            {...props}
-                            fullWidth
-                            margin="normal"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            variant="outlined"
-                        />
-                        <IconButton
-                            variant="contained"
-                            color="primary"
-                            onClick={handleSubmit}
-                            disabled={name === "" || email === "" || subject === "" || text === "" ? true : false}
-                        >
-                            <EmailIcon />
-                        </IconButton>
-                        <Snackbar
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            open={snackbar}
-                            autoHideDuration={2750}
-                            onClose={handleClose}>
-                            <MuiAlert onClose={handleClose} severity="success">
-                                Your message has been sent.
-                            </MuiAlert>
-                        </Snackbar>
+                            <Avatar className={classes.avatar1} src={avatar1} alt='Avatar' />
+                        </Grid>
+                        <div className="uk-container uk-inline container">
+                            <div className="uk-text-left contactInfo" >
+                                <div className="box" id="contactme">
+                                    <IconButton href="https://github.com/rubiocode" target="_blank">
+                                        <GitHubIcon />
+                                        <Typography variant='h5'>Check out my Github</Typography>
+                                    </IconButton>
+                                </div>
+                                <div className="box">
+                                    <IconButton href="https://www.linkedin.com/in/rubidia-rubio-in" target="_blank">
+                                        <LinkedInIcon />
+                                        <Typography variant='h5'>LinkedIn</Typography>
+                                    </IconButton>
+                                </div>
+                                <div className="box">
+                                    <IconButton href="mailto:w.rubidia.rubio@gmail.com" target="_blank">
+                                        <EmailIcon />
+                                        <Typography variant='h5'>Email Me!</Typography>
+                                    </IconButton>
+                                </div>
+                                <div className="box">
+                                    <IconButton target="_blank" href={Resume}>
+                                        <AttachFileIcon />
+                                        <Typography variant='h5'>Download My Resume</Typography>
+                                    </IconButton>
+                                </div>
+                            </div>
+                        </div>
                     </ThemeProvider>
                 </Grid>
             </Grid>
         </>
-    );
+    )
 }
 
-export default Contacts;
+export default Contacts
