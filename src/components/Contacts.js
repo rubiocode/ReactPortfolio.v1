@@ -111,7 +111,7 @@ const Contacts = (props) => {
                                     </IconButton>
                                 </div>
                                 <div className="box">
-                                    <IconButton href="mailto:w.rubidia.rubio@gmail.com" target="_blank">
+                                    <IconButton href="mailto:w.rubidia.rubio@gmail.com">
                                         <EmailIcon />
                                         <Typography variant='h5'>Email Me!</Typography>
                                     </IconButton>

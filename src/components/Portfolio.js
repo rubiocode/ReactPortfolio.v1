@@ -19,12 +19,13 @@ import {
 
 const useStyles = makeStyles({
     mainContainer: {
-        background: '#f8f1cd',
-        height: '100%',
-        width: '100%',
+        background: '#F9F5EC',
+        height: '100vh',
+        width: '100vw',
         margin: '0px'
     },
     cardContainer: {
+        background: '#white',
         maxWidth: 345,
         margin: '3rem'
     },

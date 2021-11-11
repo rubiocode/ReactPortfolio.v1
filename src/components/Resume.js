@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
     heading: {
         color: 'Black',
         padding: '3rem 0',
-        textTransform: 'uppercase'
+        
     },
     subHeading: {
         color: '#FF6347',
@@ -126,7 +126,7 @@ const Resume = () => {
                 <Avatar className={classes.avatar1} src={avatar1} alt='Avatar' />
             </Grid>
                 <Typography variant='h6' align='center' className={classes.heading}>
-                My name is Rubi and I am a fullstack sofware developer and web designer student. I truly enjoy using my newly acquired technical skills to develop creative and innovative applications. I am a fast learner with a strong desire to continue expanding my knowledge. I am self-motivated and a team player. Let's build something together!
+                My name is Rubi and I am a results-oriented Full Stack Software Developer with extensive background in healthcare which has provided me with valuable skills such as critical thinking, attention to detail, multitasking, organizational and effective communications skills. I am self motivated and a team player. I create efficient, dynamic, responsive and visually pleasing applications. I am a hardworking employee and a fast learner with a desire to learn even more skills. Let’s build something together!
                 </Typography>
                 <Box component='div' className={classes.timeLine}>
                     <Typography variant='h2' className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
@@ -137,19 +137,19 @@ const Resume = () => {
                         variant='h5' 
                         aligh='center' 
                         className={classes.subHeading}>
-                            Student at CU Denver Trilogy extension
+                            Full Stack Software Developer
                         </Typography>
                         <Typography 
                         variant='body1' 
                         aligh='center' 
                         style={{ color: '#FF6347' }}>
-                            April 2021 - Present
+                            April 2021 - October 2021
                         </Typography>
                         <Typography 
                         variant='subtitle1' 
                         aligh='center' 
                         style={{ color: '#d2b48c' }}>
-                            CU Denver Coding Boot Camp
+                            University of Denver Trilogy Extension, Coding Bootcamp
                         </Typography>
                     </Box>
                     <Typography variant='h2' className={`${classes.timeLineYear} ${classes.timeLineItem}`}>
